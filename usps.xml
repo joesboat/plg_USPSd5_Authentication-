@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="authentication" method="upgrade" >
+	<name>Authentication - USPS</name>
+	<author>Joseph P. Gibson</author>
+	<creationDate>January 2015</creationDate>
+	<copyright>Copyright (C) 2015 Joseph P. Gibson, All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joe@joesboat.org</authorEmail>
+	<authorUrl>www.joesboat.org</authorUrl>
+	<version>2.5</version>
+	<description>Login for USPS Members on www.usps.org</description>
+	<files>
+		<filename plugin="usps">usps.php</filename>
+		<filename>index.html</filename>
+		<filename>usps.xml</filename>
+	</files>
+	<config>
+		<fields	name="params">
+			<fieldset 	name="controls"
+ 						label="Controls"	>
+				<field	name="d5_login"
+               			type="list" 
+               			size="1"
+               			default="0" 
+               			label="Use on server:" 
+               			description="Specifies the server hosting the login."
+               	>
+					<option value="1">USPSd5.org Login</option>
+					<option	value="0">USPS.org Login</option>				
+				</field> 				
+               	<field 	name="debug" 
+               			type="list" 
+               			size="1"
+               			default="0" 
+               			label="Log actions." 
+               			description="When On record data for all logins."
+               	>
+					<option value="1">On</option>
+					<option	value="0">Off</option>
+            	</field>
+				<field 	name="log" 
+               			type="list" 
+               			size="1"
+               			default="0" 
+               			label="Enter Member Name" 
+               			description="Enter member name in log on each member log-in. "
+               	>
+					<option value="1">On</option>
+					<option	value="0">Off</option>
+            	</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>
+
